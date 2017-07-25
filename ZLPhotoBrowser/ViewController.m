@@ -106,15 +106,15 @@
     
     NSMutableArray *arr = [NSMutableArray array];
     for (PHAsset *asset in self.lastSelectAssets) {
-        if (asset.mediaType == PHAssetMediaTypeImage) {
-            if (self.selGifSwitch.isOn && [[asset valueForKey:@"filename"] hasSuffix:@"GIF"]) {
-                continue;
-            }
-            if (self.selLivePhotoSwitch.isOn && (asset.mediaSubtypes== PHAssetMediaSubtypePhotoLive || asset.mediaSubtypes == 10)) {
-                continue;
-            }
+//        if (asset.mediaType == PHAssetMediaTypeImage) {
+//            if (self.selGifSwitch.isOn && [[asset valueForKey:@"filename"] hasSuffix:@"GIF"]) {
+//                continue;
+//            }
+//            if (self.selLivePhotoSwitch.isOn && (asset.mediaSubtypes== PHAssetMediaSubtypePhotoLive || asset.mediaSubtypes == 10)) {
+//                continue;
+//            }
             [arr addObject:asset];
-        }
+//        }
     }
     actionSheet.arrSelectedAssets = self.rememberLastSelSwitch.isOn&&self.maxSelCountTextField.text.integerValue>1 ? arr : nil;
     

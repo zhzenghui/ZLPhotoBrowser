@@ -167,6 +167,8 @@
 //        self.topView.hidden = YES;
     }
     
+    self.btnSelect.hidden = NO;
+
     self.btnSelect.selected = model.isSelected;
 
     CGSize size;

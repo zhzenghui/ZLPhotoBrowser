@@ -93,10 +93,10 @@ double const ScalePhotoWidth = 1000;
     _arrSelectedAssets = arrSelectedAssets;
     [self.arrSelectedModels removeAllObjects];
     for (PHAsset *asset in arrSelectedAssets) {
-        if (asset.mediaType != PHAssetMediaTypeImage) {
-            //选择的视频不做保存
-            continue;
-        }
+//        if (asset.mediaType != PHAssetMediaTypeImage) {
+//            //选择的视频不做保存
+//            continue;
+//        }
         ZLPhotoModel *model = [ZLPhotoModel modelWithAsset:asset type:ZLAssetMediaTypeImage duration:nil];
         model.isSelected = YES;
         [self.arrSelectedModels addObject:model];
