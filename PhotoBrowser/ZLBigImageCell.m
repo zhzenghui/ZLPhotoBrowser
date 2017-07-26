@@ -54,7 +54,12 @@
 {
     _model = model;
     
-    [self.bigImageView loadNormalImage:model.asset];
+    if (model.type == ZLAssetMediaTypeImage) {
+        [self.bigImageView loadNormalImage:model.asset];
+    }
+    else if (model.type == ZLAssetMediaTypeGif) {
+        [self.bigImageView loadGifImage:model.asset];
+    }
 }
 
 @end

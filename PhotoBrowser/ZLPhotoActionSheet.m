@@ -20,6 +20,7 @@
 #import "ZLShowGifViewController.h"
 #import "ZLShowVideoViewController.h"
 #import "ZLShowLivePhotoViewController.h"
+#import "ZLShowMediaViewController.h"
 
 #define kBaseViewHeight (self.maxPreviewCount ? 300 : 142)
 
@@ -244,7 +245,7 @@ double const ScalePhotoWidth = 1000;
 - (void)previewSelectedPhotos:(NSArray<UIImage *> *)photos assets:(NSArray<PHAsset *> *)assets index:(NSInteger)index
 {
     self.arrSelectedAssets = [NSMutableArray arrayWithArray:assets];
-    ZLShowBigImgViewController *svc = [[ZLShowBigImgViewController alloc] init];
+    ZLShowMediaViewController *svc = [[ZLShowMediaViewController alloc] init];
     ZLImageNavigationController *nav = [self getImageNavWithRootVC:svc];
     nav.showSelectBtn = YES;
     svc.selectIndex = index;
@@ -687,7 +688,7 @@ double const ScalePhotoWidth = 1000;
 //查看大图界面
 - (void)pushBigImageViewControllerWithModels:(NSArray<ZLPhotoModel *> *)models index:(NSInteger)index
 {
-    ZLShowBigImgViewController *svc = [[ZLShowBigImgViewController alloc] init];
+    ZLShowMediaViewController *svc = [[ZLShowMediaViewController alloc] init];
     ZLImageNavigationController *nav = [self getImageNavWithRootVC:svc];
     
     svc.models = models;

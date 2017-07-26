@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4158BA11F28CC9A00536348 /* ZLShowMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4158BA01F28CC9A00536348 /* ZLShowMediaViewController.m */; };
+		F4158BA71F29023400536348 /* ZLVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4158BA61F29023400536348 /* ZLVideoCell.m */; };
+		F4158BA91F29144200536348 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4158BA81F29144200536348 /* Reveal.framework */; };
 		FD028BCF1CBE33BB009DD2FC /* ZLNoAuthorityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD028BA01CBE33BB009DD2FC /* ZLNoAuthorityViewController.xib */; };
 		FD028BD01CBE33BB009DD2FC /* ZLPhotoActionSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD028BA11CBE33BB009DD2FC /* ZLPhotoActionSheet.xib */; };
 		FD028BD11CBE33BB009DD2FC /* ZLPhotoBrowserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD028BA21CBE33BB009DD2FC /* ZLPhotoBrowserCell.xib */; };
@@ -59,6 +62,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4158B9F1F28CC9A00536348 /* ZLShowMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLShowMediaViewController.h; sourceTree = "<group>"; };
+		F4158BA01F28CC9A00536348 /* ZLShowMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLShowMediaViewController.m; sourceTree = "<group>"; };
+		F4158BA51F29023400536348 /* ZLVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLVideoCell.h; sourceTree = "<group>"; };
+		F4158BA61F29023400536348 /* ZLVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLVideoCell.m; sourceTree = "<group>"; };
+		F4158BA81F29144200536348 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		FD028BA01CBE33BB009DD2FC /* ZLNoAuthorityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZLNoAuthorityViewController.xib; sourceTree = "<group>"; };
 		FD028BA11CBE33BB009DD2FC /* ZLPhotoActionSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZLPhotoActionSheet.xib; sourceTree = "<group>"; };
 		FD028BA21CBE33BB009DD2FC /* ZLPhotoBrowserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZLPhotoBrowserCell.xib; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4158BA91F29144200536348 /* Reveal.framework in Frameworks */,
 				FD7852511EF4FD5300C69E84 /* PhotosUI.framework in Frameworks */,
 				FD07877E1C0D47DA00D17B97 /* Photos.framework in Frameworks */,
 			);
@@ -158,6 +167,8 @@
 				FD028BA51CBE33BB009DD2FC /* ToastUtils.m */,
 				FD028BA81CBE33BB009DD2FC /* ZLBigImageCell.h */,
 				FD028BA91CBE33BB009DD2FC /* ZLBigImageCell.m */,
+				F4158BA51F29023400536348 /* ZLVideoCell.h */,
+				F4158BA61F29023400536348 /* ZLVideoCell.m */,
 				FD10CECF1EA882490041095C /* ZLCollectionCell.h */,
 				FD10CECD1EA86AF60041095C /* ZLCollectionCell.m */,
 				FD028BAC1CBE33BB009DD2FC /* ZLDefine.h */,
@@ -177,6 +188,8 @@
 				FD028BAE1CBE33BB009DD2FC /* ZLNoAuthorityViewController.m */,
 				FD028BBB1CBE33BB009DD2FC /* ZLShowBigImgViewController.h */,
 				FD028BBC1CBE33BB009DD2FC /* ZLShowBigImgViewController.m */,
+				F4158B9F1F28CC9A00536348 /* ZLShowMediaViewController.h */,
+				F4158BA01F28CC9A00536348 /* ZLShowMediaViewController.m */,
 				FD0AE30B1EA768E400954E7F /* ZLShowGifViewController.h */,
 				FD0AE30C1EA768E400954E7F /* ZLShowGifViewController.m */,
 				FD10CEC91EA855100041095C /* ZLShowVideoViewController.h */,
@@ -274,6 +287,7 @@
 		FD07877C1C0D47C700D17B97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4158BA81F29144200536348 /* Reveal.framework */,
 				FD7852501EF4FD5300C69E84 /* PhotosUI.framework */,
 				FD07877D1C0D47DA00D17B97 /* Photos.framework */,
 			);
@@ -312,7 +326,7 @@
 				TargetAttributes = {
 					FD07871C1C0D45A200D17B97 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 47UY3G7UH6;
+						DevelopmentTeam = RT3BB3MP9J;
 					};
 				};
 			};
@@ -383,6 +397,7 @@
 				FD3771191DB8C04B00CAD645 /* NSBundle+ZLPhotoBrowser.m in Sources */,
 				FD30F0691C72EECC0060F19F /* ZLShowBigImage.m in Sources */,
 				FDDB9EBB1E6D2EF6008ED9F1 /* YYFPSLabel.m in Sources */,
+				F4158BA71F29023400536348 /* ZLVideoCell.m in Sources */,
 				FD028BD91CBE33BB009DD2FC /* ZLPhotoBrowser.m in Sources */,
 				FD7852541EF50EE700C69E84 /* ZLShowLivePhotoViewController.m in Sources */,
 				FD028BDF1CBE33BB009DD2FC /* ZLThumbnailViewController.m in Sources */,
@@ -391,6 +406,7 @@
 				FD028BDC1CBE33BB009DD2FC /* ZLProgressHUD.m in Sources */,
 				FD028BD81CBE33BB009DD2FC /* ZLPhotoActionSheet.m in Sources */,
 				FD028BDE1CBE33BB009DD2FC /* ZLShowBigImgViewController.m in Sources */,
+				F4158BA11F28CC9A00536348 /* ZLShowMediaViewController.m in Sources */,
 				FD22D7221E9E2EDC008FCC4E /* ZLPhotoManager.m in Sources */,
 				FDDB9EBA1E6D2EF6008ED9F1 /* YYWeakProxy.m in Sources */,
 				FD10CECB1EA855100041095C /* ZLShowVideoViewController.m in Sources */,
@@ -509,10 +525,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47UY3G7UH6;
+				DEVELOPMENT_TEAM = RT3BB3MP9J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZLPhotoBrowser",
+					FRAMEWORK_SEARCH_PATHS,
+					"=",
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				INFOPLIST_FILE = ZLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZL.PhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -523,10 +553,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47UY3G7UH6;
+				DEVELOPMENT_TEAM = RT3BB3MP9J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZLPhotoBrowser",
+					FRAMEWORK_SEARCH_PATHS,
+					"=",
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				INFOPLIST_FILE = ZLPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZL.PhotoBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -12,7 +12,7 @@
 #import "ZLCollectionCell.h"
 #import "ZLPhotoManager.h"
 #import "ZLPhotoModel.h"
-#import "ZLShowBigImgViewController.h"
+#import "ZLShowMediaViewController.h"
 #import "ZLPhotoBrowser.h"
 #import "ToastUtils.h"
 #import "ZLProgressHUD.h"
@@ -206,7 +206,7 @@
 
 - (UIViewController *)getBigImageVCWithData:(NSArray<ZLPhotoModel *> *)data index:(NSInteger)index
 {
-    ZLShowBigImgViewController *vc = [[ZLShowBigImgViewController alloc] init];
+    ZLShowMediaViewController *vc = [[ZLShowMediaViewController alloc] init];
     vc.models = data.copy;
     vc.selectIndex = index;
     weakify(self);
@@ -381,28 +381,28 @@
     ZLImageNavigationController *nav = (ZLImageNavigationController *)self.navigationController;
     
     if (model.type == ZLAssetMediaTypeVideo) {
-        if (nav.arrSelectedModels.count > 0) {
-            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectVideo]);
-            return nil;
-        }
+//        if (nav.arrSelectedModels.count > 0) {
+//            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectVideo]);
+//            return nil;
+//        }
         //跳转预览视频
         ZLShowVideoViewController *vc = [[ZLShowVideoViewController alloc] init];
         vc.model = model;
         return vc;
     } else if (nav.allowSelectGif && model.type == ZLAssetMediaTypeGif) {
-        if (nav.arrSelectedModels.count > 0) {
-            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectGIF]);
-            return nil;
-        }
+//        if (nav.arrSelectedModels.count > 0) {
+//            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectGIF]);
+//            return nil;
+//        }
         //跳转预览GIF
         ZLShowGifViewController *vc = [[ZLShowGifViewController alloc] init];
         vc.model = model;
         return vc;
     } else if (nav.allowSelectLivePhoto && model.type == ZLAssetMediaTypeLivePhoto) {
-        if (nav.arrSelectedModels.count > 0) {
-            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectLivePhoto]);
-            return nil;
-        }
+//        if (nav.arrSelectedModels.count > 0) {
+//            ShowToastLong(@"%@", [NSBundle zlLocalizedStringForKey:ZLPhotoBrowserCannotSelectLivePhoto]);
+//            return nil;
+//        }
         //跳转预览GIF
         ZLShowLivePhotoViewController *vc = [[ZLShowLivePhotoViewController alloc] init];
         vc.model = model;
@@ -410,7 +410,7 @@
     } else {
         ZLImageNavigationController *nav = (ZLImageNavigationController *)self.navigationController;
         
-        NSArray *arr = [ZLPhotoManager getPhotoInResult:self.albumListModel.result allowSelectVideo:NO allowSelectImage:YES allowSelectGif:!nav.allowSelectGif allowSelectLivePhoto:!nav.allowSelectLivePhoto];
+        NSArray *arr = [ZLPhotoManager getPhotoInResult:self.albumListModel.result allowSelectVideo:YES allowSelectImage:YES allowSelectGif:YES allowSelectLivePhoto:YES];
         
         NSMutableArray *selIdentifiers = [NSMutableArray array];
         for (ZLPhotoModel *m in nav.arrSelectedModels) {

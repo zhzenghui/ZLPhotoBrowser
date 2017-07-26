@@ -127,27 +127,27 @@
         [strongSelf.collectionView reloadData];
         NSLog(@"image:%@", images);
     }];
-    [actionSheet setSelectGifBlock:^(UIImage * _Nonnull gif, PHAsset * _Nonnull asset) {
-        strongify(weakSelf);
-        strongSelf.arrDataSources = @[gif];
-        strongSelf.lastSelectAssets = @[asset].mutableCopy;
-        [strongSelf.collectionView reloadData];
-        NSLog(@"gif:%@", gif);
-    }];
-    [actionSheet setSelectLivePhotoBlock:^(UIImage * _Nonnull livePhoto, PHAsset * _Nonnull asset) {
-        strongify(weakSelf);
-        strongSelf.arrDataSources = @[livePhoto];
-        strongSelf.lastSelectAssets = @[asset].mutableCopy;
-        [strongSelf.collectionView reloadData];
-        NSLog(@"livePhoto:%@", livePhoto);
-    }];
-    [actionSheet setSelectVideoBlock:^(UIImage * _Nonnull coverImage, PHAsset * _Nonnull asset) {
-        strongify(weakSelf);
-        strongSelf.arrDataSources = @[coverImage];
-        strongSelf.lastSelectAssets = @[asset].mutableCopy;
-        [strongSelf.collectionView reloadData];
-        NSLog(@"video cover image:%@", coverImage);
-    }];
+//    [actionSheet setSelectGifBlock:^(UIImage * _Nonnull gif, PHAsset * _Nonnull asset) {
+//        strongify(weakSelf);
+//        strongSelf.arrDataSources = @[gif];
+//        strongSelf.lastSelectAssets = @[asset].mutableCopy;
+//        [strongSelf.collectionView reloadData];
+//        NSLog(@"gif:%@", gif);
+//    }];
+//    [actionSheet setSelectLivePhotoBlock:^(UIImage * _Nonnull livePhoto, PHAsset * _Nonnull asset) {
+//        strongify(weakSelf);
+//        strongSelf.arrDataSources = @[livePhoto];
+//        strongSelf.lastSelectAssets = @[asset].mutableCopy;
+//        [strongSelf.collectionView reloadData];
+//        NSLog(@"livePhoto:%@", livePhoto);
+//    }];
+//    [actionSheet setSelectVideoBlock:^(UIImage * _Nonnull coverImage, PHAsset * _Nonnull asset) {
+//        strongify(weakSelf);
+//        strongSelf.arrDataSources = @[coverImage];
+//        strongSelf.lastSelectAssets = @[asset].mutableCopy;
+//        [strongSelf.collectionView reloadData];
+//        NSLog(@"video cover image:%@", coverImage);
+//    }];
     
     return actionSheet;
 }
